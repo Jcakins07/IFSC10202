@@ -13,15 +13,15 @@ if total_seconds >= seconds_in_year:
 
 if total_seconds >= seconds_in_day:
     days = total_seconds // seconds_in_day
-    total_seconds = total_seconds % seconds_in_day
+    total_seconds = total_seconds - (days * seconds_in_day)
 
 if total_seconds >= seconds_in_hour:
     hours = total_seconds // seconds_in_hour
-    total_seconds = total_seconds % seconds_in_hour
+    total_seconds = total_seconds - (hours * seconds_in_hour)
 
 if total_seconds >= seconds_in_minute:
     minutes = total_seconds // seconds_in_minute
-    total_seconds = total_seconds % seconds_in_minute
+    total_seconds = total_seconds - (minutes * seconds_in_minute)
 
 seconds = total_seconds
 
